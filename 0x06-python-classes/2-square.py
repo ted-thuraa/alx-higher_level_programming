@@ -7,7 +7,7 @@ class Square:
     def __init__(self, size=0):
         """ Instance of class Square
 
-        arguments:
+        Arguments:
 
              @size: size of side of square"""
         self.__size = size
