@@ -1,0 +1,27 @@
+>>> add_integer = __import__(0-add_integer.py).add_integer
+>>> add_integer(1, 4)
+5
+>>> add_integer(.1, 2)
+2
+>>> add_integer(-3)
+95
+>>> add_integer(1.0)
+99
+>>> add_integer(-2, 5)
+3
+>>> add_integer()
+Traceback (most recent call last):
+...
+TypeError:add_integer() takes at least 1 argument (0 given)
+>>> add_integer("foo", 2)
+Traceback (most recent call last)
+...
+TypeError: a must be an integer
+>>> add_integer(2, "baaz")
+Traceback (most recent call last)
+...
+TypeError: b must be an integer
+>>> add_integer("yoo", )
+Traceback (most recent call last)
+...
+NameError: a is not defined

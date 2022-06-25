@@ -1,0 +1,18 @@
+>>> text_indentation = __import__("5-text_indentation").text_indentation
+>>> text_indentation("I am leaving.Now")
+I am leaving.
+<BLANKLINE>
+Now
+>>> text_indentation(".?:")
+.
+<BLANKLINE>
+?
+<BLANKLINE>
+:
+<BLANKLINE>
+>>> text_identaation(23)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+>>> text_indentation("works i think")
+works i think
