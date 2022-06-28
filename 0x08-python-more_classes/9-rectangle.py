@@ -36,9 +36,9 @@ class Rectangle():
         Args:
             value: value of width
         """
-        if not isinstance(width, int):
+        if not isinstance(value, int):
             raise TypeError("width must be an integer")
-        if width < 0:
+        if value < 0:
             raise ValueError("width must be >= 0")
         self.__width = value
 
@@ -84,7 +84,7 @@ class Rectangle():
 
     def __repr__(self):
         """ represent self for eval"""
-        return ("Rectangle({:d}, {:d})", .format(self.__width, self.__height))
+        return ("Rectangle({:d}, {:d})".format(self.__width, self.__height))
 
     def __del__(self):
         """delete self and count"""
@@ -103,6 +103,7 @@ class Rectangle():
             return rect_1
         return rect_2
 
+    @classmethod
     def square(cls, size=0):
         """returns a new square version """
         """cls refers to the class, whereas"""
@@ -111,4 +112,4 @@ class Rectangle():
         """we can only access the members of the class,"""
         """whereas using the self keyword,""" 
         """we can access both the instance variables and the class attributes."""
-        return cls(width = size, height = size)
+        return cls(size, size)

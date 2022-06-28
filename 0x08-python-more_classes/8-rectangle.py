@@ -36,9 +36,9 @@ class Rectangle():
         Args:
             value: value of width
         """
-        if not isinstance(width, int):
+        if not isinstance(value, int):
             raise TypeError("width must be an integer")
-        if width < 0:
+        if value < 0:
             raise ValueError("width must be >= 0")
         self.__width = value
 
@@ -48,9 +48,9 @@ class Rectangle():
         Args:
             value: value of height
         """
-        if not isinstance(height, int):
+        if not isinstance(value, int):
             raise TypeError("height must be an integer")
-        if height < 0:
+        if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
 
@@ -84,7 +84,7 @@ class Rectangle():
 
     def __repr__(self):
         """ represent self for eval"""
-        return ("Rectangle({:d}, {:d})", .format(self.__width, self.__height))
+        return ("Rectangle({:d}, {:d})".format(self.__width, self.__height))
 
     def __del__(self):
         """delete self and count"""
