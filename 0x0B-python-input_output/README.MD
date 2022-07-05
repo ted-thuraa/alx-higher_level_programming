@@ -4,9 +4,17 @@ At the end of this project you are expected to be able to explain to anyone, wit
 Resources:
 
 https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files
+
+
 https://docs.python.org/3/tutorial/errors.html#predefined-clean-up-actions
+
+
 https://histo.ucsf.edu/BMS270/diveintopython3-r802.pdf
+
+
 https://docs.python.org/3/library/json.html
+
+
 https://automatetheboringstuff.com/
   
 
