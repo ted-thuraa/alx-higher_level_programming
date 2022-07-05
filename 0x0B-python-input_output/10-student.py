@@ -13,15 +13,15 @@ class Student():
 
     def to_json(self, attrs=None):
         """retrieves a dictioinary representation of a student instance"""
-        if attrs is None:
+        if attrs == None:
             return self.__dict__
         temp = {}
         for i in attrs:
-            if i is "first_name":
+            if i == "first_name":
                 temp[i] = self.first_name
-            elif i is "last_name":
+            elif i == "last_name":
                 temp[i] = self.last_name
-            elif i is "age":
+            elif i == "age":
                 temp[i] = self.age
             else:
                 pass
@@ -38,3 +38,4 @@ class Student():
                 if i in temp:
                 new.update({i: self.__dict__[i]})
             return new
+            """

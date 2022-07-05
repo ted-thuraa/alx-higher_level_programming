@@ -13,7 +13,7 @@ def pascal_triangle(n):
         temp = [0] + ans[-1] + [0]
         row = []
         #Next row will be len of previous + 1
-        for j in range(len(ans[-1] - 1) + 1):
+        for j in range(len(ans[-1]) + 1):
             #add them up ie prev and next
             row.append(temp[j] + temp[j + 1])
         #append them to the main list
