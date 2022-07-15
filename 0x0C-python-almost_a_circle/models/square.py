@@ -35,16 +35,19 @@ class Square(Rectangle):
 
     def update(self, *args, **kwargs):
         """assigns attributes"""
-        if args is None and len(args) != 0:
-            a = ["id", "size", "x", "y"]
-            for i in len(args):
+        a = ["id", "size", "x", "y"]
+        if len(args) != 0 and args is not None:
+            for i in range(len(args)):
                 if i > (len(a) - 1):
                     break
                 setattr(self, a[i], args[i])
         else:
             for i in kwargs.keys():
-                if i in args:
-                    setattr(self, i, kwargs[i])
+                if i in a or i == "size":
+                    if i == "size":
+                        setattr(self, a[1], kwargs["size"])
+                    else:
+                        setattr(self, i, kwargs[i])
 
     def to_dictionary(self):
         """returns dict rep of a square"""

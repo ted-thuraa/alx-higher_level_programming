@@ -1,11 +1,14 @@
 #!/usr/bin/python3
 """unit test for base class"""
 
-from models.base import Base
 import unittest
+import json
+from models.base import Base
+from models.rectangle import Rectangle
+from models.square import Square
 
 
-class Test_Base(unittest.Testcase):
+class Test_Base(unittest.TestCase):
 
     def test_id(self):
         """test if the id works properly"""
