@@ -8,10 +8,10 @@ class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
         """instatiator"""
         super().__init__(id) # this super call with use the logic of the __init__ of the Base class
-        self.idth = width
-        self.eight = height
-        self. = x
-        self. = y
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
 
     @property
     def width(self):
@@ -36,9 +36,9 @@ class Rectangle(Base):
     def height(self, value):
         """ set height of rectangle or set error value """
         if not isinstance(value, int):
-            raise TypeError("width ust be an integer")
+            raise TypeError("height must be an integer")
         if value <= 0:
-            raise ValueError("width must be > 0")
+            raise ValueError("height must be > 0")
         self.__height = value
 
     @property
@@ -50,9 +50,9 @@ class Rectangle(Base):
     def x(self, value):
         """ set x of rectangle or set error value """
         if not isinstance(value, int):
-            raise TypeError("width ust be an integer")
-        if value <= 0:
-            raise ValueError("width must be > 0")
+            raise TypeError("x must be an integer")
+        if value < 0:
+            raise ValueError("x must be >= 0")
         self.__x = value
 
     @property
@@ -65,8 +65,8 @@ class Rectangle(Base):
         """ set y of rectangle or set error value """
         if not isinstance(value, int):
             raise TypeError("y must be an integer")
-        if value <= 0:
-            raise ValueError("y must be > 0")
+        if value < 0:
+            raise ValueError("y must be >= 0")
         self.__y = value
 
     def area(self):
@@ -94,15 +94,15 @@ class Rectangle(Base):
         """ assigns argument to each attribute """
         if args is not None and len(args) != 0:
             for index, value in enumerate(args):
-                if index is 0:
+                if index == 0:
                     self.id = value
-                elif index is 1:
+                elif index == 1:
                     self.width = value
-                elif index is 2:
+                elif index == 2:
                     self.height = value
-                elif index is 3:
+                elif index == 3:
                     self.x = value
-                elif index is 4:
+                elif index == 4:
                     self.y = value
                 elif index >= 5:
                     raise Exception("too many arguments")
@@ -138,6 +138,6 @@ class Rectangle(Base):
         """returns dict rep of a rectangle"""
         temp = {}
         a = ["id", "width", "height", "x", "y"]
-        for i in range(len(a)):
+        for i in a:
             temp[i] = getattr(self, i)
         return temp

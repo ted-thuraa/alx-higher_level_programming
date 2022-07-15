@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """Tha Square"""
+from models.rectangle import Rectangle
 
 class Square(Rectangle):
     """Square class inherits from rectangle"""
@@ -8,16 +9,17 @@ class Square(Rectangle):
         """initializer"""
         super().__init__(size, size, x, y, id)
 
-def __str__(self):
-    """overites the str"""
-    return "[{}] ({}) {}/{} - {}".format(type(self).__name__, self.id, self.x, self.y, self.width)
+    def __str__(self):
+        """overites the str"""
+        return "[{}] ({}) {}/{} - {}".format(type(self).__name__, self.id, self.x, self.y, self.width)
 
-def size(self):
-    """size getter"""
-    return self.width
+    @property
+    def size(self):
+        """size getter"""
+        return self.width
 
-@size.setter
-    def width(self, value):
+    @size.setter
+    def size(self, value):
         """ set width and height to same value """
         if not isinstance(value, int):
             raise TypeError("width ust be an integer")
