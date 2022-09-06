@@ -12,3 +12,4 @@ class Square extends Esquare {
         }
     }
 } 
+module.exports = Square;
