@@ -4,7 +4,7 @@ def getAllStates(user2, passwd2, db2, input):
     conn = MySQLdb.connect(
         user = user2,
         passwd = passwd2,
-        pd = db2,
+        db = db2,
         host = "localhost",
         port = 3306
     )
