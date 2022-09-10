@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-def getAllStates(user2, passwd, db2, input):
+def getAllStates(user2, passwd2, db2, input):
     import MySQLdb
     conn = MySQLdb.connect(
         user = user2,
-        passw = passwd,
+        passwd = passwd2,
         pd = db2,
         host = "localhost",
         port = 3306
