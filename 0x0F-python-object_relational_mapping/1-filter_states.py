@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 
-def getAllStates(user1, passwd, db1):
+def getAllStates(user1, passwd1, db1):
     """ gets states and filters as required"""
     import MySQLdb
     conn = MySQLdb.connect(
         user = user1,
-        passw = passwd,
+        passwd = passwd1,
         db = db1,
         host = "localhost",
         port = 3306
