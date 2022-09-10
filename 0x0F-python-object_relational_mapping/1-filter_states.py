@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 def getAllStates(user2, passward2, db2):
     """ script that gets all the states when called on """
     import MySQLdb
